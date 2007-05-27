@@ -1,0 +1,66 @@
+libgadu
+------------------------------------------
+Client library for the Gadu-Gadu IM protocol.
+
+Runtime requirements:
+  cygwin-1.5.24-1
+
+Build requirements:
+  cygwin-1.5.24-1
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://toxygen.net/libgadu/
+
+Canonical download:
+  http://toxygen.net/libgadu/files/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libgadu-1.7.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libgadu-1.7.1-X.cygport all
+
+This will create:
+  /usr/src/libgadu-1.7.1-X-src.tar.bz2
+  /usr/src/libgadu-1.7.1-X.tar.bz2
+  /usr/src/libgadu3-1.7.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(libgadu)
+  /usr/include/libgadu.h
+  /usr/lib/libgadu.a
+  /usr/lib/libgadu.dll.a
+  /usr/lib/libgadu.la
+  /usr/lib/pkgconfig/libgadu.pc
+  /usr/share/doc/Cygwin/libgadu-1.7.1.README
+  /usr/share/doc/libgadu-1.7.1/COPYING
+
+(libgadu3)
+  /usr/bin/cyggadu-3.dll
+
+------------------
+
+Port Notes:
+
+----- version 1.7.1-1 -----
+Initial release for Cygwin.
+Replaces libgadu previously provided by ekg.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

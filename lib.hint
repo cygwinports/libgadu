@@ -1,0 +1,5 @@
+category: Net
+requires: cygwin
+external-source: libgadu
+sdesc: "Gadu-Gadu client library (runtime)"
+ldesc: "Client library for the Gadu-Gadu IM protocol."

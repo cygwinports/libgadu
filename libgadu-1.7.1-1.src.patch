@@ -1,0 +1,21 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libgadu-1.7.1/m4/acx_pthread.m4 src/libgadu-1.7.1/m4/acx_pthread.m4
+--- origsrc/libgadu-1.7.1/m4/acx_pthread.m4	2005-11-02 15:39:49.000000000 -0600
++++ src/libgadu-1.7.1/m4/acx_pthread.m4	2007-05-27 13:34:37.630014100 -0500
+@@ -210,7 +210,7 @@
+ 		# FIXME: -fPIC is required for -shared on many architectures,
+ 		# so we specify it here, but the right way would probably be to
+ 		# properly detect whether it is actually required.
+-		CFLAGS="-shared -fPIC -Wl,-z,defs $CFLAGS $PTHREAD_CFLAGS"
++		CFLAGS="-shared $CFLAGS $PTHREAD_CFLAGS"
+ 		LIBS="$PTHREAD_LIBS $LIBS"
+ 		CC="$PTHREAD_CC"
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libgadu-1.7.1/src/Makefile.am src/libgadu-1.7.1/src/Makefile.am
+--- origsrc/libgadu-1.7.1/src/Makefile.am	2007-04-21 18:29:18.000000000 -0500
++++ src/libgadu-1.7.1/src/Makefile.am	2007-05-27 13:10:57.043609900 -0500
+@@ -1,4 +1,4 @@
+ lib_LTLIBRARIES = libgadu.la
+ libgadu_la_SOURCES = common.c dcc.c events.c http.c obsolete.c pubdir.c pubdir50.c libgadu.c
+ libgadu_la_CFLAGS = -I$(top_srcdir) -I$(top_srcdir)/include
+-libgadu_la_LDFLAGS = -version-number 3:7
++libgadu_la_LDFLAGS = -version-number 3:7 -no-undefined

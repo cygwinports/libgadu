@@ -1,0 +1,4 @@
+category: Net
+requires: cygwin
+sdesc: "Gadu-Gadu client library (development)"
+ldesc: "Client library for the Gadu-Gadu IM protocol."
