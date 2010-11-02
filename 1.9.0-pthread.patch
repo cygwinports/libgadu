@@ -1,0 +1,13 @@
+AX_PTHREAD doesn't try to use the non-portable -Wl,-z,defs
+
+--- origsrc/libgadu-1.9.0/configure.ac	2010-08-02 09:08:04.000000000 -0500
++++ src/libgadu-1.9.0/configure.ac	2010-11-02 10:38:52.735556200 -0500
+@@ -155,7 +155,7 @@ AC_ARG_WITH(pthread,
+   [  --without-pthread       do not use pthread resolver even if possible])
+ 
+ if test "x$with_pthread" != "xno"; then
+-	ACX_PTHREAD(
++	AX_PTHREAD(
+ 	[
+ 		dnl workaround dla pkgconfiga
+ 		if test "x$PTHREAD_CFLAGS" = "x-pthread"; then

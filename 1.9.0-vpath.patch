@@ -1,0 +1,11 @@
+--- origsrc/libgadu-1.9.0/test/protocol/Makefile.am	2010-08-02 09:08:04.000000000 -0500
++++ src/libgadu-1.9.0/test/protocol/Makefile.am	2010-11-02 10:53:36.929298300 -0500
+@@ -7,7 +7,7 @@ EXTRA_DIST = compile readme.txt valgrind
+ SUBDIRS = tests
+ 
+ script.c:	$(wildcard tests/*.scr) compile
+-	$(PERL) compile tests/*.scr > script.c
++	$(PERL) $(srcdir)/compile $(srcdir)/tests/*.scr > script.c
+ 
+ clean-local:
+ 	rm -f *.log script.c

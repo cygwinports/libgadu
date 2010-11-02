@@ -1,11 +1,15 @@
 DESCRIPTION="Gadu-Gadu client library"
 HOMEPAGE="http://toxygen.net/libgadu/"
 SRC_URI="http://toxygen.net/libgadu/files/${P}.tar.gz"
-PATCH_URI="1.8.2-no-undefined.patch
-           1.8.2-pthread.patch"
 
-PKG_NAMES="${PN} ${PN}3 ${PN}-devel"
+PATCH_URI="
+	1.9.0-no-undefined.patch
+	1.9.0-pthread.patch
+	1.9.0-vpath.patch
+"
+
+PKG_NAMES="${PN}3 ${PN}-devel"
 libgadu3_CONTENTS='usr/bin/cyggadu-3.dll usr/share/doc/'
 libgadu_devel_CONTENTS='usr/include/ usr/lib/'
 
-CYGCONF_ARGS="--with-pthread"
+CYGCONF_ARGS="--with-pthread --without-bind --without-openssl"
