@@ -3,9 +3,9 @@ HOMEPAGE="http://toxygen.net/libgadu/"
 SRC_URI="http://toxygen.net/libgadu/files/${P}.tar.gz"
 
 PATCH_URI="
-	1.9.0-no-undefined.patch
+	1.11.0-no-undefined.patch
 	1.9.0-pthread.patch
-	1.9.0-vpath.patch
+	1.11.0-vpath.patch
 "
 
 PKG_NAMES="${PN}3 ${PN}-devel"

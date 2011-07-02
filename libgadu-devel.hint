@@ -1,5 +1,5 @@
 category: Net
-requires: libgadu3
+requires: libgadu3 gnutls-devel zlib-devel
 external-source: libgadu
 sdesc: "Gadu-Gadu client library (development)"
 ldesc: "Client library for the Gadu-Gadu IM protocol."
