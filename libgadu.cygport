@@ -1,4 +1,9 @@
-DESCRIPTION="Gadu-Gadu client library"
+NAME="libgadu"
+VERSION=1.11.2
+RELEASE=1
+CATEGORY="Net"
+SUMMARY="Gadu-Gadu client library"
+DESCRIPTION="Client library for the Gadu-Gadu IM protocol."
 HOMEPAGE="http://toxygen.net/libgadu/"
 SRC_URI="http://toxygen.net/libgadu/files/${P}.tar.gz"
 
@@ -13,3 +18,5 @@ libgadu3_CONTENTS='usr/bin/cyggadu-3.dll usr/share/doc/'
 libgadu_devel_CONTENTS='usr/include/ usr/lib/'
 
 CYGCONF_ARGS="--with-pthread --without-bind --without-openssl"
+
+KEEP_LA_FILES="none"
