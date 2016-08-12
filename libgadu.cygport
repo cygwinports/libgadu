@@ -1,5 +1,5 @@
 NAME="libgadu"
-VERSION=1.12.0
+VERSION=1.12.1
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Gadu-Gadu client library"
@@ -15,6 +15,8 @@ PATCH_URI="
 PKG_NAMES="${NAME}3 ${NAME}-devel"
 libgadu3_CONTENTS='usr/bin/cyggadu-3.dll usr/share/doc/'
 libgadu_devel_CONTENTS='usr/include/ usr/lib/'
+
+DIFF_EXCLUDES="Doxyfile"
 
 CYGCONF_ARGS="--with-pthread --without-bind --without-openssl"
 
